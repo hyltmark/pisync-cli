@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'pisync';
+
+var findup = require('findup-sync');
+var resolve = require('resolve').sync;
+
+var basedir = process.cwd();
+var pisyncpath;
+
+try {
+  pisyncpath = resolve('pisync.js', {basedir: basedir});
+} catch (ex) {
+
+  pisyncpath = findup('pisync/pisync.js');
+
+  if (!pisyncpath) {
+		console.log('No local PiSync found!');
+  }
+}
+
+require(pisyncpath).cli();
