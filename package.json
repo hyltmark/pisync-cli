@@ -3,7 +3,7 @@
   "description": "The pisync command line interface",
   "version": "0.2.0",
   "author": "Ulf Hyltmark <ulf@hyltmark.com>",
-  "repository": "moname/pisync-cli",
+  "repository": "hyltmark/pisync-cli",
   "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
@@ -19,5 +19,6 @@
   },
   "files": [
     "bin"
-  ]
+  ],
+  "preferGlobal": true
 }

@@ -11,14 +11,16 @@ var basedir = process.cwd();
 var pisyncpath;
 
 try {
-  pisyncpath = resolve('pisync.js', {basedir: basedir});
+  pisyncpath = resolve('pisync', {basedir: basedir});
 } catch (ex) {
 
-  pisyncpath = findup('pisync/pisync.js');
+  pisyncpath = findup('lib/pisync.js');
 
   if (!pisyncpath) {
-		console.log('No local PiSync found!');
+    console.log('Unable to find local PiSync!');
   }
 }
 
-require(pisyncpath).cli();
+if (pisyncpath !== null) {
+  require(pisyncpath).cli();
+}
