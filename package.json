@@ -11,7 +11,7 @@
   "scripts": {
   },
   "bin": {
-    "grunt": "bin/pisync"
+    "pis": "bin/pisync"
   },
   "dependencies": {
     "findup-sync": "~0.3.0",
